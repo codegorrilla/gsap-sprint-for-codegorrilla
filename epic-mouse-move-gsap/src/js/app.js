@@ -52,6 +52,7 @@ const moveEvent = (e) => {
 	const wrapperRect = wrapper.getBoundingClientRect();
 
 	const relX = e.clientX - (wrapperRect.left + wrapperRect.width / 2);
+	console.log(`${relX}px`);
 
 	const relY = e.clientY - (wrapperRect.top + wrapperRect.height / 2);
 
