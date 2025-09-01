@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	background-color: black;
+	overflow-x: hidden;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em;
+	font-family: 'Arial', sans-serif;
+
+	.logo {
+		font-size: 2rem;
+		font-weight: 600;
+		text-align: left;
+		color: white;
+		text-transform: lowercase;
+	}
+
+	nav {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 1rem;
+
+		a {
+			font-size: 1rem;
+			font-weight: normal;
+			color: olivedrab;
+			text-align: center;
+			text-decoration: none;
+		}
+	}
+}
+
+.spacer {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	padding: 2em 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 1.5em;
+	color: white;
+
+	h1 {
+		padding-bottom: 2em;
+		font-size: 5vw;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	&.thumbNailContent {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			&.flip-img {
+				width: 400px;
+				height: 200px;
+				max-width: none;
+				object-fit: cover;
+				object-position: top;
+				border-radius: 10px;
+			}
+		}
+	}
+
+	&.fullScreenContent {
+		//background-color: white;
+		padding-top: 20vh;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: row;
+		gap: 1em;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 20px;
+
+			&.medium-img {
+				max-width: 40vw;
+				max-height: 40vh;
+			}
+		}
+
+		.about {
+			width: 100%;
+			max-width: 30vw;
+			display: flex;
+			padding: 0 2em;
+			justify-content: flex-start;
+			gap: 1em;
+			flex-direction: column;
+
+			h2 {
+				font-size: 2rem;
+				font-weight: 600;
+				color: white;
+				text-align: left;
+				text-transform: capitalize;
+				padding: 0.3em 0;
+			}
+
+			p {
+				font-size: 1.4em;
+				font-weight: normal;
+				color: white;
+				text-align: left;
+				line-height: 1.4;
+			}
+		}
+	}
+}

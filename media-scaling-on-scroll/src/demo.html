@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<main>
+			<section class="section start-section">
+				<h1>Initial State</h1>
+				<div class="image-wrapper start-wrapper">
+					<img
+						id="my-image"
+						src="https://picsum.photos/800/600"
+						alt="Scaling example"
+					/>
+				</div>
+			</section>
+
+			<section class="section middle-section">
+				<h1>Scaling Transition</h1>
+				<div class="image-wrapper end-wrapper">
+					<!-- The image will be moved here by GSAP -->
+				</div>
+			</section>
+
+			<section class="section final-section">
+				<h1>Final State</h1>
+				<p>Scroll down to see the image scale back down and unpin.</p>
+			</section>
+		</main>
+
+		<script
+			type="module"
+			src="./js/demo.js"
+		></script>
+	</body>
+</html>
