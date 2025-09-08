@@ -1,0 +1,41 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
+/* Style for the initial, smaller image */
+.image-wrapper.start-wrapper {
+	width: 50vw;
+	max-width: 600px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the final, full-screen image container */
+.image-wrapper.end-wrapper {
+	width: 100vw;
+	height: 100vh;
+	max-width: none;
+	border-radius: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+/* Ensure the image fills its container in both states */
+#my-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
