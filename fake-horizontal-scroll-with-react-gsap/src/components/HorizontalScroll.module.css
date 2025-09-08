@@ -1,0 +1,41 @@
+.horizontal-section-wrapper {
+	overflow: hidden;
+}
+
+.horizontal-container {
+	display: flex;
+	flex-wrap: nowrap;
+	height: 100vh;
+}
+
+.panel {
+	width: 100vw;
+	height: 100vh;
+	flex-shrink: 0;
+	display: grid;
+	place-items: center;
+	font-family: sans-serif;
+	color: white;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.panel.one {
+	background-color: brown;
+}
+
+.panel.two {
+	background-color: red;
+}
+
+.panel.three {
+	background-color: blueviolet;
+}
+
+.panel.four {
+	background-color: pink;
+}
+
+.panel.five {
+	background-color: fuchsia;
+}
