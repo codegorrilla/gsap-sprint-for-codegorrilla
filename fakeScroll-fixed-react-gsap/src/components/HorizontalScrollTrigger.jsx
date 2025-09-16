@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { panelData } from './PanelData';
 import Panel from './Panel';
+import { PanelContent } from './PanelContent';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -36,7 +37,7 @@ export default function HorizontalScrollTrigger() {
 					scrollTrigger: {
 						trigger: panel,
 						start: 'left 0%',
-						end: 'right 100%',
+						end: 'left 50%',
 						containerAnimation: scrollTween,
 						markers: true,
 						scrub: true,
@@ -57,7 +58,7 @@ export default function HorizontalScrollTrigger() {
 							console.log(`Completed animating in Panel ${index + 1}`),
 					})
 					.to('.box', {
-						y: -200,
+						y: -400,
 						ease: 'power2.in',
 						scrollTrigger: {
 							trigger: '.box',
@@ -89,15 +90,15 @@ export default function HorizontalScrollTrigger() {
 						<div>{panel.content}</div>
 
 						{/* Conditionally render unique content based on data */}
-						{panel.listItems && (
+						{/* {panel.listItems && (
 							<ul>
 								{panel.listItems.map((item, itemIndex) => (
 									<li key={itemIndex}>{item}</li>
 								))}
 							</ul>
-						)}
+						)} */}
 
-						{panel.buttonText && (
+						{/* {panel.buttonText && (
 							<button
 								onClick={() =>
 									alert(`You clicked the button in ${panel.title}`)
@@ -105,7 +106,8 @@ export default function HorizontalScrollTrigger() {
 							>
 								{panel.buttonText}
 							</button>
-						)}
+						)} */}
+						<PanelContent panel={panel} />
 					</Panel>
 				))}
 			</div>

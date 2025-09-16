@@ -1,5 +1,6 @@
 export const panelData = [
 	{
+		type: 'basic',
 		title: 'Panel One',
 		content: (
 			<>
@@ -12,16 +13,19 @@ export const panelData = [
 		),
 	},
 	{
+		type: 'list',
 		title: 'Panel Two',
 		content: <p>This panel has a different kind of content, with a list:</p>,
 		listItems: ['Item A', 'Item B', 'Item C'],
 	},
 	{
+		type: 'cta',
 		title: 'Panel Three',
 		content: <p>Here is a unique button for Panel Three.</p>,
 		buttonText: 'Click Me!',
 	},
 	{
+		type: 'basic',
 		title: 'Panel Four',
 		content: (
 			<>
@@ -30,11 +34,7 @@ export const panelData = [
 		),
 	},
 	{
+		type: 'basic',
 		title: 'Panel Five',
-		content: (
-			<>
-				<div className='box'>I'm Box 2</div>
-			</>
-		),
 	},
 ];

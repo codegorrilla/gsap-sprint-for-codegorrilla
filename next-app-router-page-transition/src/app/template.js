@@ -1,13 +1,15 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { animatePageIn } from '../animations'; // We'll create this file next
+import { useEffect, useRef, useState } from 'react';
+import { animatePageIn, animatePageOut } from '../animations'; // We'll create this file next
 
 export default function Template({ children }) {
 	const transitionRef = useRef(null);
+	const [isAnimating, setIsAnimating] = useState(true);
 
 	useEffect(() => {
-		animatePageIn(transitionRef.current);
+		//when the component first mounts, animate the overlay in
+		animatePageIn(transitionRef.current, () => setIsAnimating(false));
 	}, []);
 
 	return (
@@ -16,7 +18,7 @@ export default function Template({ children }) {
 				id='transition-element'
 				ref={transitionRef}
 			/>
-			{children}
+			<div style={{ opacity: isAnimating ? 0 : 1 }}>{children}</div>
 		</>
 	);
 }

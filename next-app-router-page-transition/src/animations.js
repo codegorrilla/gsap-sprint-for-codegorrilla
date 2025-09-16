@@ -1,8 +1,12 @@
 import gsap from 'gsap';
 
-export const animatePageIn = (transitionElement) => {
+export const animatePageIn = (transitionElement, onComplete) => {
 	if (transitionElement) {
-		const tl = gsap.timeline();
+		const tl = gsap.timeline({
+			onComplete: () => {
+				if (onComplete) onComplete();
+			},
+		});
 
 		tl.set(transitionElement, {
 			xPercent: 0,
@@ -12,6 +16,7 @@ export const animatePageIn = (transitionElement) => {
 			xPercent: 100,
 			duration: 0.8,
 			ease: 'power2.in',
+			delay: 0.2, //add a slight delay for smoother transition
 		});
 	}
 };
