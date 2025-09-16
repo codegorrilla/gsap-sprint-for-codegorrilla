@@ -63,8 +63,8 @@ export default function HorizontalGallery() {
 						scrollTrigger: {
 							trigger: thumb,
 							containerAnimation: scrollTween,
-							start: 'left 0%',
-							end: 'left 50%',
+							start: 'left right',
+							end: 'right left',
 							scrub: true,
 						},
 					}
